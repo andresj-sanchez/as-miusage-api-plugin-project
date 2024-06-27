@@ -1,0 +1,253 @@
+#wpcontent {
+    padding-left: 0 !important;
+    position: relative;
+}
+
+#as-miusage-api-admin {
+    margin: 0 auto;
+}
+
+.as-miusage-api-header {
+    align-items: center;
+    border-top: 6px solid #25A18E;
+    padding: 24px 20px 0;
+}
+
+.as-miusage-api-page-content {
+    padding: 0 20px;
+}
+
+.as-miusage-api-logo {
+    width: 250px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.as-miusage-api-subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.as-miusage-api-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.as-miusage-api-form {
+    margin-top: 15px;
+}
+
+.as-miusage-api-table {
+    margin-top: 15px;
+}
+
+.as-miusage-api-table th {
+    font-weight: 600;
+    background-color: #f8f9fa;
+}
+
+.as-miusage-api-no-data {
+    color: #666;
+    font-style: italic;
+}
+
+.as-miusage-api-btn {
+    font-family: inherit;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-shadow: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 9px 15px;
+    min-height: 36px;
+    line-height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #25A18E;
+    border-color: #25A18E;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.as-miusage-api-btn:hover, .as-miusage-api-btn:active, .as-miusage-api-btn:focus {
+    background-color: #108675;
+    border-color: #108675;
+    color: #fff;
+}
+
+.as-miusage-api-btn:focus {
+    box-shadow: 0 0 0 1px #fff,0 0 0 3px #108675;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-title {
+    min-height: 58px;
+    background-color: #fff;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-title a.tab {
+    border-bottom: 3px solid #fff;
+    box-shadow: none;
+    color: #666;
+    display: inline-block;
+    margin-right: 30px;
+    padding: 20px 0 17px 0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-title a.tab.active {
+    border-color: #25A18E;
+}
+
+#wpbody-content {
+    padding-bottom: 200px;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row.section-heading {
+    padding: 20px 0 10px;
+    border-bottom: none;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row {
+    border-bottom: 1px solid #e4e4e4;
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row:first-of-type {
+    padding-top: 10px !important;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-field {
+    display: block;
+    max-width: 800px;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row.section-heading .as-miusage-api-setting-field {
+    margin: 0;
+    max-width: 1005px;
+}
+
+#as-miusage-api-admin .as-miusage-api-refresh-data-header__heading {
+    display: flex;
+    align-items: center;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row h2, #as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row h4 {
+    color: #2c3337;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row h2 {
+    margin-bottom: 15px;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row p {
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row p:first-of-type {
+    margin: 8px 0 0;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row p.desc {
+    margin: 10px 0 0;
+    font-style: italic;
+    color: #50575e;
+}
+
+#as-miusage-api-admin .as-miusage-api-page-content .as-miusage-api-setting-row.section-heading .desc {
+    font-style: normal;
+}
+
+#wpfooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    color: #50575e;
+}
+
+#wpfooter .as-miusage-api-footer-promotion {
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: normal;
+    color: #646970;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+#wpfooter .as-miusage-api-footer-promotion p {
+    font-weight: 600;
+}
+
+#wpfooter .as-miusage-api-footer-promotion-links,
+#wpfooter .as-miusage-api-footer-promotion-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wpfooter .as-miusage-api-footer-promotion-links {
+    margin: 10px 0;
+    color: #646970;
+}
+
+#wpfooter .as-miusage-api-footer-promotion-links span {
+    color: #c3c4c7;
+    padding: 0 7px;
+}
+
+#wpfooter .as-miusage-api-footer-promotion-social {
+    gap: 10px;
+    margin: 0;
+}
+
+.alignleft {
+    float: left;
+}
+
+#wpfooter p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.55;
+}
+
+#wpfooter #footer-left {
+    color: #50575e;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#wpfooter #footer-left strong {
+    font-weight: 600;
+}
+
+.alignright {
+    float: right;
+}

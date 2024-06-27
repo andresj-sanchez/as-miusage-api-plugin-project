@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "as-miusage-api-plugin/data-table",
+    "version": "1.0.0",
+    "title": "AS Miusage API Data Table",
+    "category": "widgets",
+    "icon": "chart-area",
+    "description": "Displays data from the Miusage API",
+    "supports": {
+        "html": false
+    },
+    "textdomain": "as-miusage-api-plugin",
+    "editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+    "render": "file:./render.php",
+    "attributes": {
+        "visibleColumns": {
+            "type": "object",
+            "default": {
+                "id": true,
+                "fname": true,
+                "lname": true,
+                "email": true,
+                "date": true
+            }
+        }
+    },
+    "example": {
+        "attributes": {
+            "visibleColumns": {
+                "id": true,
+                "fname": true,
+                "lname": true,
+                "email": true,
+                "date": true
+            }
+        }
+    }
+}
