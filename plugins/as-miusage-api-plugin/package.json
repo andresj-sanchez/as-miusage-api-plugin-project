@@ -35,26 +35,5 @@
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "lint:style": "wp-scripts lint-style",
     "start": "wp-scripts start"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn build"
-    }
-  },
-  "lint-staged": {
-    "package.json": [
-      "yarn check-licenses",
-      "yarn lint:pkg-json"
-    ],
-    "*.js": [
-      "yarn lint:js"
-    ],
-    "*.php": [
-      "yarn lint:php"
-    ],
-    "*.scss": [
-      "yarn lint:style"
-    ]
   }
 }
