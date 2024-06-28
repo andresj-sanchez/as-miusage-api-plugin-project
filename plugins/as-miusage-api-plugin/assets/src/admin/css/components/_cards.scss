@@ -1,0 +1,15 @@
+.as-miusage-api-card {
+	background: #fff;
+	border: 1px solid $border-color;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	margin-bottom: 20px;
+	padding: 20px;
+
+	h2:first-of-type,
+	h4:first-of-type {
+		color: #2c3337;
+		font-size: 20px;
+		font-weight: 600;
+		margin: 0 0 6px 0;
+	}
+}

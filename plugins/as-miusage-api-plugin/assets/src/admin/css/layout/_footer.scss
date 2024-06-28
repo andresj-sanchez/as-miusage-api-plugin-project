@@ -1,0 +1,62 @@
+#wpfooter {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px 20px;
+	color: $footer-text-color;
+
+	.as-miusage-api-footer-promotion {
+		text-align: center;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: normal;
+		color: #646970;
+		padding: 30px 0;
+		margin-bottom: 20px;
+
+		p {
+			font-weight: 600;
+		}
+	}
+
+	.as-miusage-api-footer-promotion-links,
+	.as-miusage-api-footer-promotion-social {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.as-miusage-api-footer-promotion-links {
+		margin: 10px 0;
+		color: #646970;
+
+		span {
+			color: #c3c4c7;
+			padding: 0 7px;
+		}
+	}
+
+	.as-miusage-api-footer-promotion-social {
+		gap: 10px;
+		margin: 0;
+	}
+
+	p {
+		font-size: 13px;
+		margin: 0;
+		line-height: 1.55;
+	}
+
+	#footer-left {
+		color: $footer-text-color;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+
+		strong {
+			font-weight: 600;
+		}
+	}
+}

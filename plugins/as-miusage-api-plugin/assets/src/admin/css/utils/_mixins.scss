@@ -1,0 +1,15 @@
+@mixin button-style {
+	font-family: inherit;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-shadow: none;
+	box-shadow: none;
+	outline: none;
+}
