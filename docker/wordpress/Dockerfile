@@ -8,7 +8,7 @@ RUN docker-php-ext-install pdo_mysql
 
 # Set up the environment
 RUN apt-get update \
-    && apt-get -y install default-mysql-client less
+    && apt-get -y install default-mysql-client less zip
 
 # Install WP-CLI
 RUN curl -sO https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
