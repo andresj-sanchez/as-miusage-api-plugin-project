@@ -3,11 +3,29 @@
   "version": "1.0.0",
   "description": "Retrieves data from a remote API and displays it.",
   "author": "Andres Sanchez",
-  "main": "index.js",
   "license": "GPL-2.0-or-later",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "https://github.com/andresj-sanchez/as-miusage-api-plugin-project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andresj-sanchez/as-miusage-api-plugin-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andresj-sanchez/as-miusage-api-plugin-project/issues"
+  },
+  "main": "index.js",
   "browserslist": [
     "extends @wordpress/browserslist-config"
   ],
+  "devDependencies": {
+    "@wordpress/scripts": "^28.2.0",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "dotenv": "^16.4.5",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.5.0",
+    "stylelint-config-prettier": "^9.0.5"
+  },
   "scripts": {
     "analyze": "npm run build --webpack-bundle-analyzer",
     "build": "wp-scripts build",
@@ -17,6 +35,12 @@
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "lint:style": "wp-scripts lint-style",
     "start": "wp-scripts start"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn build"
+    }
   },
   "lint-staged": {
     "package.json": [
@@ -32,14 +56,5 @@
     "*.scss": [
       "yarn lint:style"
     ]
-  },
-  "devDependencies": {
-    "@wordpress/scripts": "^28.2.0",
-    "browser-sync": "^2.29.3",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "dotenv": "^16.4.5",
-    "husky": "^4.3.8",
-    "lint-staged": "^12.5.0",
-    "stylelint-config-prettier": "^9.0.5"
   }
 }
