@@ -2,7 +2,7 @@
 
 ## Description
 
-AS Miusage API Plugin is a WordPress plugin developed as part of a coding challenge. It retrieves data from a remote API endpoint, caches it, and makes it accessible through a custom WordPress API endpoint. The plugin features a Gutenberg block for displaying the data, an admin page for data management, and a WP-CLI command for refreshing the data.
+AS Miusage API Plugin is a WordPress plugin. It retrieves data from a remote API endpoint, caches it, and makes it accessible through a custom WordPress API endpoint. The plugin features a Gutenberg block for displaying the data, an admin page for data management, and a WP-CLI command for refreshing the data.
 
 ## Features
 
@@ -16,13 +16,24 @@ AS Miusage API Plugin is a WordPress plugin developed as part of a coding challe
 
 ## Installation
 
+### Option 1: Install from WordPress Admin Panel
+
+1. Download the plugin zip file from the [latest release](https://github.com/andresj-sanchez/as-miusage-api-plugin-project/releases/tag/v1.0.0).
+2. Log in to your WordPress admin panel.
+3. Go to Plugins > Add New.
+4. Click on the "Upload Plugin" button at the top of the page.
+5. Choose the downloaded zip file and click "Install Now".
+6. After installation, click "Activate Plugin" to enable the AS Miusage API Plugin.
+
+### Option 2: Manual Installation for Development
+
 1. Clone this repository into your WordPress plugins directory:
    ```
-   git clone https://github.com/yourusername/as-miusage-api-plugin.git
+   git clone https://github.com/andresj-sanchez/as-miusage-api-plugin-project.git
    ```
 2. Navigate to the plugin directory:
    ```
-   cd as-miusage-api-plugin
+   cd plugins/as-miusage-api-plugin
    ```
 3. Install dependencies:
    ```
