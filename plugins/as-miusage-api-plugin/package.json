@@ -1,0 +1,45 @@
+{
+  "name": "as-miusage-api-plugin",
+  "version": "1.0.0",
+  "description": "Retrieves data from a remote API and displays it.",
+  "author": "Andres Sanchez",
+  "main": "index.js",
+  "license": "GPL-2.0-or-later",
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "scripts": {
+    "analyze": "npm run build --webpack-bundle-analyzer",
+    "build": "wp-scripts build",
+    "check-licenses": "wp-scripts check-licenses --prod",
+    "format:js": "wp-scripts format",
+    "lint:js": "wp-scripts lint-js",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "lint:style": "wp-scripts lint-style",
+    "start": "wp-scripts start"
+  },
+  "lint-staged": {
+    "package.json": [
+      "yarn check-licenses",
+      "yarn lint:pkg-json"
+    ],
+    "*.js": [
+      "yarn lint:js"
+    ],
+    "*.php": [
+      "yarn lint:php"
+    ],
+    "*.scss": [
+      "yarn lint:style"
+    ]
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^28.2.0",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "dotenv": "^16.4.5",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.5.0",
+    "stylelint-config-prettier": "^9.0.5"
+  }
+}

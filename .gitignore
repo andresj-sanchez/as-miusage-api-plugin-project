@@ -3,6 +3,7 @@
 /.phpunit.cache
 node_modules/
 vendor/
+build/
 .env
 .env.backup
 .env.production

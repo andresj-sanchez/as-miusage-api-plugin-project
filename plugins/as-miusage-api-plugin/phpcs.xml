@@ -11,6 +11,14 @@
 
 	<rule ref="WordPress-Docs"></rule>
 
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="as-miusage-api-plugin"/>
+            </property>
+        </properties>
+    </rule>
+
     <!-- Exclude JavaScript files in the blocks directory -->
     <!-- Exclude all JavaScript files -->
     <exclude-pattern>*.js</exclude-pattern>

@@ -2,6 +2,19 @@
     "[php]": {
         "editor.defaultFormatter": "persoderlind.vscode-phpcbf"
     },
+    "[javascript][css][scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
     "phpcs.standard": "WordPress",
     "phpcs.composerJsonPath": "./plugins/as-miusage-api-plugin/composer.json",
     "phpcs.executablePath": "./plugins/as-miusage-api-plugin/vendor/bin/phpcs",
