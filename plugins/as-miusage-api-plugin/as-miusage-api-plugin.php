@@ -2,12 +2,13 @@
 /**
  * Plugin Name: AS Miusage API Plugin
  * Description: Retrieves data from a remote API and displays it.
- * Version: 1.0.0
- * Author: Andres Sanchez
+ * Version:     1.0.0
+ * Author:      Andres Sanchez
  * Text Domain: as-miusage-api-plugin
- * License: GPL-2.0-or-later
+ * Domain Path: /assets/languages
+ * License:     GPL-2.0-or-later
  *
- * @package AsMiusageApiPlugin
+ * @package     AsMiusageApiPlugin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

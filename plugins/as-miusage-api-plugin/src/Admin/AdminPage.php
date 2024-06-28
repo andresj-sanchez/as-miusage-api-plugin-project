@@ -2,15 +2,21 @@
 /**
  * Admin page functionality for the AS Miusage API Plugin.
  *
- * @package AndresjSanchez\AsMiusageApiPlugin\Admin
+ * @package AndresjSanchez\AsMiusageApiPlugin
+ * @author  Andres Sanchez
+ * @version 1.0.0
  */
 
 namespace AndresjSanchez\AsMiusageApiPlugin\Admin;
 
+use AndresjSanchez\AsMiusageApiPlugin\Plugin;
 use AndresjSanchez\AsMiusageApiPlugin\DataFetcher;
 
 /**
- * Class AdminPage
+ * AdminPage class.
+ *
+ * This class is responsible for managing the admin page functionality of the plugin.
+ * It handles menu registration, asset enqueueing, and rendering of the admin interface.
  */
 class AdminPage {
 
@@ -22,7 +28,12 @@ class AdminPage {
 	private $data;
 
 	/**
-	 * Register the admin menu item.
+	 * Registers the admin menu item and associated hooks.
+	 *
+	 * This method is called to set up the admin menu and register various WordPress hooks
+	 * related to the admin functionality.
+	 *
+	 * @return void
 	 */
 	public static function register_menu() {
 		$hook_suffix = add_menu_page(
@@ -34,8 +45,8 @@ class AdminPage {
 			'dashicons-chart-area'
 		);
 
-		// Enqueue admin styles only for this page.
-		add_action( 'admin_print_styles-' . $hook_suffix, array( self::class, 'enqueue_admin_styles' ) );
+		// Enqueue admin scripts and styles only for this page.
+		add_action( 'admin_enqueue_scripts', array( self::class, 'enqueue_admin_assets' ) );
 
 		// Add action to handle form submission.
 		add_action( 'admin_init', array( self::class, 'handle_form_submission' ) );
@@ -48,22 +59,35 @@ class AdminPage {
 
 		// Outputs the plugin version in the admin footer.
 		add_filter( 'update_footer', array( self::class, 'display_update_footer' ), PHP_INT_MAX );
+
+		$flyout_menu = new FlyoutMenu();
+		$flyout_menu->hooks();
 	}
 
 	/**
-	 * Enqueue admin styles.
+	 * Enqueues admin assets for the plugin's admin page.
+	 *
+	 * This method is hooked to 'admin_enqueue_scripts' and ensures that the admin
+	 * assets are only loaded on the plugin's specific admin page.
+	 *
+	 * @return void
 	 */
-	public static function enqueue_admin_styles() {
-		wp_enqueue_style(
-			'as-miusage-api-admin',
-			AS_MIUSAGE_API_PLUGIN_URL . 'assets/css/admin.css',
-			array(),
-			AS_MIUSAGE_API_PLUGIN_VERSION
-		);
+	public static function enqueue_admin_assets() {
+		// Only enqueue on the plugin's admin page.
+		if ( ! self::is_admin_page() ) {
+			return;
+		}
+
+		Plugin::enqueue_assets( 'admin' );
 	}
 
 	/**
-	 * Render the admin page content.
+	 * Renders the admin page content.
+	 *
+	 * This method is responsible for initializing the admin page instance,
+	 * fetching necessary data, and rendering the admin page template.
+	 *
+	 * @return void
 	 */
 	public static function render_page() {
 		$instance = new self();
@@ -72,7 +96,12 @@ class AdminPage {
 	}
 
 	/**
-	 * Handle form submission.
+	 * Handles form submission on the admin page.
+	 *
+	 * This method processes form submissions, specifically for refreshing data,
+	 * and displays a success notice upon completion.
+	 *
+	 * @return void
 	 */
 	public static function handle_form_submission() {
 		if ( isset( $_POST['refresh_data'] ) && check_admin_referer( 'as_miusage_refresh_data', 'as_miusage_nonce' ) ) {
@@ -82,14 +111,24 @@ class AdminPage {
 	}
 
 	/**
-	 * Fetch data from the API.
+	 * Fetches data from the API.
+	 *
+	 * This method retrieves data using the DataFetcher class and stores it
+	 * in the class property for use in rendering the admin page.
+	 *
+	 * @return void
 	 */
 	private function fetch_data() {
 		$this->data = DataFetcher::get_data();
 	}
 
 	/**
-	 * Render the admin page template.
+	 * Renders the admin page template.
+	 *
+	 * This method includes the admin page template file and makes the
+	 * fetched data available to it.
+	 *
+	 * @return void
 	 */
 	private function render_template() {
 		$data = $this->data; // Make data available to the template.
@@ -97,7 +136,11 @@ class AdminPage {
 	}
 
 	/**
-	 * Display success notice.
+	 * Displays a success notice after data refresh.
+	 *
+	 * This method outputs an admin notice indicating successful data refresh.
+	 *
+	 * @return void
 	 */
 	public static function display_success_notice() {
 		?>
@@ -108,7 +151,11 @@ class AdminPage {
 	}
 
 	/**
-	 * Display custom admin footer.
+	 * Displays custom admin footer content.
+	 *
+	 * This method adds custom content to the admin footer on the plugin's admin page.
+	 *
+	 * @return void
 	 */
 	public static function display_admin_footer() {
 
@@ -122,10 +169,10 @@ class AdminPage {
 				<p><?php esc_html_e( 'Made with ♥ by Andrés Sánchez', 'as-miusage-api-plugin' ); ?></p>
 				<ul class="as-miusage-api-footer-promotion-links">
 					<li>
-						<a href="#" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Support', 'as-miusage-api-plugin' ); ?></a><span>/</span>
+						<a href="https://github.com/andresj-sanchez/as-miusage-api-plugin-project/issues" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Support', 'as-miusage-api-plugin' ); ?></a><span>/</span>
 					</li>
 					<li>
-						<a href="#" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Docs', 'as-miusage-api-plugin' ); ?></a>
+						<a href="https://github.com/andresj-sanchez/as-miusage-api-plugin-project" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Docs', 'as-miusage-api-plugin' ); ?></a>
 					</li>
 				</ul>
 				<ul class="as-miusage-api-footer-promotion-social">
@@ -151,18 +198,20 @@ class AdminPage {
 	}
 
 	/**
-	 * Display a text to ask users to review the plugin on WP.org.
+	 * Modifies the admin footer text on the plugin's admin page.
 	 *
-	 * @param string $text The default text to display in admin plugin page footer.
+	 * This method replaces the default admin footer text with a custom message
+	 * on the plugin's admin page.
 	 *
-	 * @return string
+	 * @param string $text The default footer text.
+	 * @return string Modified footer text.
 	 */
 	public static function get_admin_footer( $text ) {
 		if ( self::is_admin_page() ) {
 			$feedback_email = 'contacttowork.andres@gmail.com';
 			$message        = sprintf(
 				/* translators: %s: email address for feedback */
-				__( 'Your feedback on this coding challenge submission is appreciated. Share your thoughts <a href="mailto:%s">here</a>', 'as-miusage-api-plugin' ),
+				__( 'Your feedback on this coding challenge submission is appreciated. Share your thoughts <a href="mailto:%s">here</a>.', 'as-miusage-api-plugin' ),
 				esc_attr( $feedback_email )
 			);
 			return wp_kses_post( $message );
@@ -172,11 +221,12 @@ class AdminPage {
 	}
 
 	/**
-	 * Display the plugin version in the footer of our plugin pages.
+	 * Displays the plugin version in the admin footer.
 	 *
-	 * @param string $text Text of the footer.
+	 * This method adds the plugin version to the admin footer text on the plugin's admin page.
 	 *
-	 * @return string
+	 * @param string $text The default update footer text.
+	 * @return string Modified update footer text including plugin version.
 	 */
 	public static function display_update_footer( $text ) {
 		if ( self::is_admin_page() ) {
@@ -187,11 +237,13 @@ class AdminPage {
 	}
 
 	/**
-	 * Check if the current page is the plugin's admin page.
+	 * Checks if the current page is the plugin's admin page.
 	 *
-	 * @return bool
+	 * This method determines whether the current admin screen belongs to this plugin.
+	 *
+	 * @return bool True if current page is the plugin's admin page, false otherwise.
 	 */
-	private static function is_admin_page() {
+	public static function is_admin_page() {
 		$screen = get_current_screen();
 		return $screen && strpos( $screen->id, 'as-miusage-api-plugin' ) !== false;
 	}
