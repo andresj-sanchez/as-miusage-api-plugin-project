@@ -1,0 +1,9 @@
+.deploy
+.DS_Store
+.git
+.github
+.gitmodules
+*.sql
+*.tar.gz
+bin
+node_modules
