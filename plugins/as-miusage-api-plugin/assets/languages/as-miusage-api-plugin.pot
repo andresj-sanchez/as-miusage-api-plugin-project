@@ -1,0 +1,157 @@
+# Copyright (C) 2024 Andres Sanchez
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AS Miusage API Plugin 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/as-miusage-api-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-06-27T23:01:08+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: as-miusage-api-plugin\n"
+
+#. Plugin Name of the plugin
+#: as-miusage-api-plugin.php
+msgid "AS Miusage API Plugin"
+msgstr ""
+
+#. Description of the plugin
+#: as-miusage-api-plugin.php
+msgid "Retrieves data from a remote API and displays it."
+msgstr ""
+
+#. Author of the plugin
+#: as-miusage-api-plugin.php
+msgid "Andres Sanchez"
+msgstr ""
+
+#: src/Admin/AdminPage.php:40
+#: src/Admin/AdminPage.php:41
+msgid "AS Miusage API"
+msgstr ""
+
+#: src/Admin/AdminPage.php:148
+msgid "Data refreshed successfully."
+msgstr ""
+
+#: src/Admin/AdminPage.php:169
+msgid "Made with ♥ by Andrés Sánchez"
+msgstr ""
+
+#: src/Admin/AdminPage.php:172
+msgid "Support"
+msgstr ""
+
+#: src/Admin/AdminPage.php:175
+msgid "Docs"
+msgstr ""
+
+#: src/Admin/AdminPage.php:184
+msgid "GitHub"
+msgstr ""
+
+#: src/Admin/AdminPage.php:192
+msgid "LinkedIn"
+msgstr ""
+
+#. translators: %s: email address for feedback
+#: src/Admin/AdminPage.php:214
+msgid "Your feedback on this coding challenge submission is appreciated. Share your thoughts <a href=\"mailto:%s\">here</a>."
+msgstr ""
+
+#: src/Admin/FlyoutMenu.php:64
+msgid "See Quick Links"
+msgstr ""
+
+#: src/Admin/FlyoutMenu.php:114
+msgid "Contact Me"
+msgstr ""
+
+#: src/Admin/FlyoutMenu.php:119
+msgid "Checkout my LinkedIn"
+msgstr ""
+
+#: src/Admin/FlyoutMenu.php:124
+msgid "Checkout the Source Code"
+msgstr ""
+
+#: src/Api/DataEndpoint.php:51
+#: src/Block/build/index.js:77
+#: src/Block/src/edit.js:100
+#: src/Block/build/index.js:47
+msgid "No data available"
+msgstr ""
+
+#: src/Cli/RefreshCommand.php:41
+msgid "Data has been refreshed."
+msgstr ""
+
+#: templates/admin-page.php:16
+msgid "Retrieve and display data from the Miusage API"
+msgstr ""
+
+#: templates/admin-page.php:32
+#: templates/admin-page.php:47
+msgid "Refresh Data"
+msgstr ""
+
+#. translators: %s: URL to API documentation
+#: templates/admin-page.php:38
+msgid "Click the \"Refresh Data\" button to manually update the data fetched from the <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">remote API</a>. This process will override the hourly limit and fetch the latest available data."
+msgstr ""
+
+#: templates/admin-page.php:54
+msgid "API Data"
+msgstr ""
+
+#: templates/admin-page.php:77
+#: templates/data-table.php:65
+msgid "No data available."
+msgstr ""
+
+#: src/Block/build/index.js:72
+#: src/Block/build/index.js:43
+msgid "Loading..."
+msgstr ""
+
+#: src/Block/build/index.js:91
+#: src/Block/src/edit.js:111
+#: src/Block/build/index.js:65
+msgid "Column Visibility"
+msgstr ""
+
+#: src/Block/build/index.js:132
+#: src/Block/src/index.js:26
+#: src/Block/build/index.js:120
+msgid "AS Miusage API Data Table"
+msgstr ""
+
+#: src/Block/build/index.js:133
+#: src/Block/src/index.js:27
+#: src/Block/build/index.js:121
+msgid "Displays data from the Miusage API"
+msgstr ""
+
+#: src/Block/src/edit.js:90
+msgid "Loading…"
+msgstr ""
+
+#: assets/build/Block/build/block.json
+#: assets/build/Block/src/block.json
+#: src/Block/build/block.json
+#: src/Block/src/block.json
+msgctxt "block title"
+msgid "AS Miusage API Data Table"
+msgstr ""
+
+#: assets/build/Block/build/block.json
+#: assets/build/Block/src/block.json
+#: src/Block/build/block.json
+#: src/Block/src/block.json
+msgctxt "block description"
+msgid "Displays data from the Miusage API"
+msgstr ""
